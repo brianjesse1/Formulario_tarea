@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block heading %}
+TU PERFIL:
+{% endblock %}
+
+{% block body %}
+<div class="sesion">
+
+    <h2>Nombres:</h2>
+    <div class="hola">{{ name }}</div>
+    
+    <h2>Apellidos:</h2>
+    <div class="hola">{{apellido}}</div>
+    
+    <h2>Sexo:</h2>
+    <div class="hola">{{ sexo }}</div>
+
+    <h2>Numero de Contacto:</h2>
+    <div class="hola">{{ numero }} </div>
+
+    <h2>Correo Electronico:</h2>
+    <div class="hola">{{ email }}</div>
+
+    <h2>Fecha de Cumpleaños:</h2>
+    <div class="hola">{{ cumple }}</div>
+    
+    <h2>Pais:</h2>    
+    <div class="hola">{{ pais }} </div>    
+    
+</div>
+
+{% endblock %}

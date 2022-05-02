@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block heading %}
+Formulario
+{% endblock %}
+
+{% block body %}
+<form action="{{ url_for('login') }}" method="post">
+
+	<div class="all">
+		<label for="nombre">Nombres</label>
+		<br>
+			<input type="text" id="nombre" name="nombre" placeholder="Nombres"  class="casilla">
+		<br>
+		<label for="apellido">Apellidos</label>
+		<br>
+			<input type="text" id="apellido" name="apellido" placeholder="Apellidos" class="casilla">
+		<br>
+		<label for="nombre">Seleccione su Sexo</label>
+		<br>
+		<input type="radio" name="sexo"  class="sel_otro" value="Masculino">
+			<label for="nombre" id="sel_se">Masculino </label>
+		<br>
+		<input type="radio" name="sexo" class="sel_otro"  value="Femenino">
+			<label for="nombre" id="sel_se">Femenino </label>
+		<br>
+		<label for="contacto"> Numero de Contacto</label>
+		<br>
+		<input type="text" id="contacto" name="numero" placeholder="Ingrese su numero de contacto" pattern=".{9,}" required title="minimo 9 caracteres" maxlength="9" class="casilla">
+		<br>
+		<label for="email">Email </label>
+		<br>
+			<input type="email" id="email" name="email" placeholder="Ingrese su email" class="casilla">
+		<br>		
+		<fieldset>
+			<legend>Fecha de tu cumpleaños:</legend>
+			<label for="cumple">
+				<input type="date" id="cumple" name="cumple" class="casilla"
+				min="2022-01-01" list=""
+				max="2022-12-31" name="" value="">
+			</label>
+		</fieldset>
+		<!--
+		<br>
+			<label for="cumple">Fecha de cumpleaños</label>
+		<br>
+			<input type="date" id="cumple" name="cumple" placeholder="1"  class="casilla">    
+		<br>
+		-->
+			<label for="pais">Seleccione su Pais</label>
+			<select name="pais" class="casilla">
+				<option value="Peru">Peru</option>
+				<option value="Colombia">Colombia</option>
+				<option value="Venezuela">Venezuela</option>
+				<option value="Bolivia">Bolivia</option>
+				<option value="Chile">Chile</option>
+				<option value="Ecuador">Ecuador</option>
+				<option value="Brasil">Brasil</option>
+				<option value="Salvador">Salvador</option>
+				<option value="Argentina">Argentina</option>
+			</select>
+    <br>
+    <button>EnviarFormulario</button>
+	</div>
+</form>
+{% endblock %}
